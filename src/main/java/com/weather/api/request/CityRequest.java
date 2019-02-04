@@ -2,6 +2,13 @@ package com.weather.api.request;
 
 import javax.validation.constraints.NotNull;
 
+/**
+ * City Request
+ * 
+ * @author Eliton
+ *
+ */
+
 public class CityRequest {
 
 	private String id;

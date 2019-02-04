@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.weather.api.document.CityEntity;
 
 /**
+ * City repository 
  * 
  * @author Eliton
  *

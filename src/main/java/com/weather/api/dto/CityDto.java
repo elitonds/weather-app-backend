@@ -1,6 +1,7 @@
 package com.weather.api.dto;
 
 /**
+ * Cyty DTO
  * 
  * @author Eliton
  *

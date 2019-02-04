@@ -3,6 +3,7 @@ package com.weather.api.dto;
 import java.util.List;
 
 /**
+ * Pageable DTO 
  * 
  * @author Eliton
  *
