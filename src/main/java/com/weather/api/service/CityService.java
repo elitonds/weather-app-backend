@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -43,6 +46,26 @@ public class CityService {
 			result.getData().add(dto);
 		});
 		result.setTotal(10);
+		return result;
+	}
+	
+	/**
+	 * Return all the cities registered in the Database with pagination
+	 * 
+	 * @param page the index of the page
+	 * @param size max results
+	 * @return the cities with pagination
+	 */
+	public PageableDto listPaged(int page, int size){
+		Pageable pageable = PageRequest.of(page, size);
+		PageableDto result = new PageableDto();
+		result.setData(new ArrayList<>());
+		Page<CityEntity> resultEntity = repository.findAll(pageable);
+		resultEntity.getContent().forEach(entity ->{
+			CityDto dto = new CityDto(entity.getId(), entity.getName(), entity.getCountry());
+			result.getData().add(dto);
+		});
+		result.setTotal(resultEntity.getTotalElements());
 		return result;
 	}
 

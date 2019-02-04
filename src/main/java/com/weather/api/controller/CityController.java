@@ -35,10 +35,10 @@ public class CityController extends BaseController {
 	@Autowired
 	private CityService service;
 
-	@GetMapping
+	@GetMapping()
 	@ResponseBody
-	public PageableDto listAll(@RequestParam("page") int page, @RequestParam("size") int size) {
-		return service.listAll(page, size);
+	public PageableDto listAllPaged(@RequestParam("page") int page, @RequestParam("size") int size) {
+		return service.listPaged(page, size);
 	}
 
 	@PostMapping(path = "/add")

@@ -12,7 +12,7 @@ import java.util.List;
 public class PageableDto {
 	
 	private List<BaseDto> data;
-	private int total;
+	private long total;
 
 	public List<BaseDto> getData() {
 		return data;
@@ -22,11 +22,11 @@ public class PageableDto {
 		this.data = data;
 	}
 
-	public int getTotal() {
+	public long getTotal() {
 		return total;
 	}
 
-	public void setTotal(int total) {
+	public void setTotal(long total) {
 		this.total = total;
 	}
 }
