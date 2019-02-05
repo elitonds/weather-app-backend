@@ -5,10 +5,10 @@ Sistema de cadastro de cidades e consulta sobre o clima da das cidades cadastrad
 **Softwares necessários para rodar o projeto**
 
 ```
-* MongoDB v4.0.5 [Download](https://www.mongodb.com/download-center/community
+* MongoDB v4.0.5 https://www.mongodb.com/download-center/community
 * após a instalação do MongoDB criar o repositório C:/data/db e adicionar a váriavel de ambiente PATH o seguinte caminho 
   "C:\Program Files\MongoDB\Server\4.0\bin"
-* Eclipse v4.9.0 ou superior [Download](https://www.eclipse.org/downloads/)
+* Eclipse v4.9.0 ou superior https://www.eclipse.org/downloads/
 ```
 
 **Processos para iniciar o projeto**
